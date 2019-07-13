@@ -1,0 +1,8 @@
+bin=$HOME/dev/software/sbt/bin/sbt
+
+
+$bin "runMain QueryDataServletRun data/SCMOntology/Queries/Query1"
+$bin "runMain QueryDataServletRun data/SCMOntology/Queries/Query2"
+$bin "runMain QueryDataServletRun data/SCMOntology/Queries/Query3"
+$bin "runMain QueryDataServletRun data/SCMOntology/Queries/Query4"
+$bin "runMain QueryDataServletRun data/SCMOntology/Queries/Query5"

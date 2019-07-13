@@ -1,0 +1,4 @@
+@prefix bro: <http://www.bro.com#> .
+
+bro:brother rdfs:subClassOf bro:sibling .
+bro:jouko rdf:type bro:brother .

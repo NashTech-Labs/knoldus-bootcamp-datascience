@@ -1,0 +1,3 @@
+PREFIX shop: <http://www.shop.com#>
+SELECT *
+WHERE {?x rdf:type shop:Shirts . }

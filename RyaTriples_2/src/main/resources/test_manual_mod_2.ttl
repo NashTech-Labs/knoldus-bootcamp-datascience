@@ -1,0 +1,267 @@
+@prefix kn: <http://www.knoldus.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix po: <https://www.w3.org/2002/ws/sawsdl/spec/ontology/purchaseorder/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix org: <https://www.w3.org/TR/vocab-org/#org> .
+@prefix skos: <https://www.w3.org/2009/08/skos-reference/skos.html#> .
+@prefix enterprise: <http://www.aiai.ed.ac.uk/project/enterprise/enterprise/ontology-code/enterprise-v1.0/> .
+@prefix xsd: <thhp://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+kn:purchase_order a owl:class .
+
+kn:department a owl:class .
+
+kn:DEPARTMENT_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:department ;
+	rdfs:range xsd:integer .
+
+kn:DEPARTMENT_NAME a owl:DataTypeProperty ;
+	rdfs:domain kn:department ;
+	rdfs:range xsd:string .
+
+kn:cost_center a owl:class .
+
+kn:COST_CENTER a owl:DataTypeProperty ;
+	rdfs:domain kn:cost_center ;
+	rdfs:range xsd:integer .
+
+kn:COST_CENTER_NAME a owl:DataTypeProperty ;
+	rdfs:domain kn:cost_center ;
+	rdfs:range xsd:string .
+
+kn:po_type a owl:class .
+
+kn:PO_TYPE_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:po_type ;
+	rdfs:range xsd:string .
+
+kn:PO_TYPE_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:po_type ;
+	rdfs:range xsd:string .
+
+kn:po_category a owl:class .
+
+kn:PO_CATEGORY_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:po_category ;
+	rdfs:range xsd:string .
+
+kn:PO_CATEGORY_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:po_category ;
+	rdfs:range xsd:string .
+
+kn:po_status a owl:class .
+
+kn:PO_STATUS_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:po_status ;
+	rdfs:range xsd:integer .
+
+kn:PO_STATUS_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:po_status ;
+	rdfs:range xsd:string .
+
+kn:vendor rdfs:subClassOf enterprise:Vendor .
+kn:VENDOR_NUMBER rdfs:domain kn:vendor .
+kn:VENDOR_NAME_1 rdfs:domain kn:vendor .
+kn:VENDOR_NAME_2 rdfs:domain kn:vendor .
+kn:VENDOR_ADDRESS_1 rdfs:domain kn:vendor .
+kn:VENDOR_ADDRESS_2 rdfs:domain kn:vendor .
+vcard:locality rdfs:domain kn:vendor .
+vcard:region rdfs:domain kn:vendor .
+vcard:postal-code rdfs:domain kn:vendor .
+foaf:name rdfs:domain kn:vendor .
+vcard:hasTitle rdfs:domain kn:vendor .
+vcard:hasTelephone rdfs:domain kn:vendor .
+
+kn:VENDOR_CONTACT_EXTENSION a owl:DataTypeProperty ;
+	rdfs:domain kn:vendor ;
+	rdfs:range xsd:integer .
+
+kn:VENDOR_MINORITY_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:vendor ;
+	rdfs:range xsd:string .
+
+kn:VENDOR_MINORITY_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:vendor ;
+	rdfs:range xsd:string .
+
+kn:TOTAL_ITEMS a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:integer .
+
+kn:PO_BALANCE a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:item a owl:class .
+
+kn:item_line a owl:class ;
+	rdfs:domain kn:item .
+
+kn:item_single a owl:class ;
+	rdfs:domain kn:item .
+
+kn:ITEM_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:item_line ;
+	rdfs:range xsd:integer .
+
+kn:ITME_QUANTITY_ORDERED a owl:DataTypeProperty ;
+	rdfs:domain kn:item_line ;
+	rdfs:range xsd:integer .
+
+kn:ITEM_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:item_single ;
+	rdfs:range xsd:string .
+
+kn:ITEM_UNIT_OF_MEASURE a owl:DataTypeProperty ;
+	rdfs:domain kn:item_single ;
+	rdfs:range xsd:string .
+
+kn:ITEM_UNIT_OF_MEASURE_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:item_single ;
+	rdfs:range xsd:string .
+
+kn:ITEM_UNIT_COST a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_single ;
+	rdfs:range xsd:float .
+
+kn:ITEM_TOTAL_COST a owl:DataTypeProperty ;
+	rdfs:domain kn:item_line ;
+	rdfs:range xsd:float .
+
+kn:UNIQUE_ID a owl:DataTypeProperty ;
+	rdfs:domain kn:item_line ;
+	rdfs:range xsd:string .
+
+kn:PURCHASE_ORDER_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:REQUISITION_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:INPUT_DATE a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:date .
+
+kn:TOTAL_AMOUNT a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:department a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:cost_center a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:INPUT_BY a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:PURCHASING_AGENT a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:po_type a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:po_category a owl:ObjectProperty ;
+	rdfs:domain kn:purachse_order .
+
+kn:po_status a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:VOUCHED_AMOUNT a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:vendor a owl:ObjectProperty ;
+	rdfs:domain kn:purchaser_order .
+
+kn:department_60 a kn:department ;
+	kn:DEPARTMENT_NUMBER "60"^^xsd:integer ;
+	kn:DEPARTMENT_NAME "HUMAN_DEVELOPMENT_AND_SERVICES" .
+
+kn:cost_center_6058 a kn:cost_center ;
+	kn:COST_CENTER "6058" ;
+	kn:COST_CENTER_NAME "DHDS - LA HOUSING FINANCE AGENCY" .
+
+kn:po_type_b a kn:po_type ;
+	kn:PO_TYPE_CODE "B" ;
+	kn:PO_TYPE_DESCRIPTION "GOODS-SERV" .
+
+kn:po_type_s a kn:po_type ;
+	kn:PO_TYPE_CODE "S" ;
+	kn:PO_TYPE_DESCRIPTION "SERVICES" .
+
+kn:po_category_sc a kn:po_category ;
+	kn:PO_CATEGORY_CODE "SC" ;
+	kn:PO_CATEGORY_DESCRIPTION "STATE_CONTRACT" .
+
+kn:po_status_3 a kn:po_status ;
+	kn:PO_STATUS_CODE "3"^^xsd:integer ;
+	kn:PO_STATUS_DESCRIPTION "ENCMRD-PT" .
+
+kn:vendor_hon_company a kn:vendor ;
+	kn:VENDOR_NUMBER "52840"^^xsd:integer ;
+	kn:VENDOR_NAME_1 "HON COMPANY" ;
+	kn:VENDOR_ADDRESS_1 "200 OAK ST" ;
+	vcard:locality "MUSCATINE" ;
+	vcard:region "IA" ;
+	vcard:postal-code "52761" ;
+	foaf:name "JEFF JOLLAY" ;
+	vcard:hasTelephone "5632727539" .
+
+kn:item_line_1 a kn:item_line ;
+	kn:ITEM_NUMBER "1"^^xsd:integer ;
+	kn:ITEM_QUANTITY_ORDERED "1"^^xsd:integer ;
+	kn:ITEM_TOTAL_COST "390.37"^^xsd:float ;
+	kn:UNIQUE_ID "PO1711160001" .
+
+kn:item_single_1 a kn:item_single ;
+	kn:ITEM_DESCRIPTION "DESK; SINGLE PEDESTAL LEFT 72W X 36D,              10500 SERIES - H10586L - STANDARD LAMINATES        MAHOGANY, H10586L - HON - GSA. PER QUOTE #55609    STATE CONTRACT #4400005781, LINE #3 MDM 961091      - DELIVER TO: LEO S. BUTLER COMMUNITY CENTER" ;
+	kn:ITEM_UNIT_OF_MEASURE "EA" ;
+	kn:ITEM_UNIT_OF_MEASURE_DESCRIPTION "EACH" ;
+	kn:ITEM_UNIT_COST "390.37"^^xsd:float .
+
+kn:item_1 a kn:item ;
+	kn:item_line kn:item_line_1 ;
+	kn:item_single kn:item_single_1 .
+
+kn:item_line_2 a kn:item_line ;
+	kn:ITEM_NUMBER "2"^^xsd:integer ;
+	kn:ITEM_QUANTITY_ORDERED "2"^^xsd:integer ;
+	kn:ITEM_TOTAL_COST "146.88"^^xsd:float ;
+	kn:UNIQUE_ID "PO1711160002" .
+
+kn:item_single_2 a kn:item_single ;
+	kn:ITEM_DESCRIPTION "TASKLIGHT; 60W HH870960 - HON - GSA                PER QUOTE #55609                                   STATE CONTRACT #4400005781, LINE #3 MDM961091" ;
+	kn:ITEM_UNIT_OF_MEASURE "EA" ;
+	kn:ITEM_UNIT_OF_MEASURE_DESCRIPTION "EACH" ;
+	kn:ITEM_UNIT_COST "73.44"^^xsd:float .
+
+kn:item_2 a kn:item ;
+	kn:item_line kn:item_line_2 ;
+	kn:item_single kn:item_single_2 .
+
+kn:PO17116 a kn:purchase_order ;
+	kn:PURCHASE_ORDER_NUMBER "PO171116" ;
+	kn:REQUISITION_NUMBER "RQ041611" ;
+	kn:INPUT_DATE "09/14/2017"^^xsd:date ;
+	kn:TOTAL_AMOUNT "4310.08"^^xsd:float ;
+	kn:department kn:department_60 ;
+	kn:cost_center kn:cost_center_6058 ;
+	kn:INPUT_BY "BDCA" ;
+	kn:PURCHASING_AGENT "DX" ;
+	kn:po_type kn:po_type_b ;
+	kn:po_category kn:po_category_sc ;
+	kn:po_status kn:po_status_3 ;
+	kn:VOUCHED_AMOUNT "0"^^xsd:float ;
+	kn:vendor kn:vendor_hon_company ;
+	kn:TOTAL_ITEMS "10"^^xsd:integer ;
+	kn:PO_BALANCE "4310.08"^^xsd:float ;
+	kn:item (kn:item_1 kn:item_2) .
+

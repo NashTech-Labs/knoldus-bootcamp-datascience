@@ -1,0 +1,3 @@
+select * where {
+<http://www.knoldus.com/PO17116> ?p ?o.
+}

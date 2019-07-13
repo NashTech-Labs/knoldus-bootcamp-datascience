@@ -1,0 +1,16 @@
+curl -X POST \
+ 'http://localhost:8080/web.rya/loadrdf?format=N3' \
+ -H 'Accept: */*' \
+ -H 'Cache-Control: no-cache' \
+ -H 'Connection: keep-alive' \
+ -H 'Content-Type: text/plain' \
+ -H 'Host: localhost:8080' \
+ -H 'Postman-Token: f181c473-bde1-4d79-9eb0-38327a52fbce,812a35f7-640a-4314-a7c0-1912779d8686' \
+ -H 'User-Agent: PostmanRuntime/7.11.0' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'cache-control: no-cache' \
+ -H 'content-length: 4271' \
+ -d '# Saved by TopBraid on Sun Nov 23 22:44:48 PST 2008
+<http://www.shop.com#Henleys> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.shop.com#Shirts> .
+<http://www.shop.com#ChamoisHenley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.shop.com#Henleys> .
+'

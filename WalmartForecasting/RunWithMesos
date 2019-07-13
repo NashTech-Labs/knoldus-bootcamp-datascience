@@ -1,0 +1,33 @@
+ip=192.168.1.5
+jar=$HOME/dev/projects/TrainingSprints/datascience-bootcamp/WalmartForecasting/target/scala-2.11/walmartforecasting_2.11-0.1.jar
+
+spark_submit=/home/jouko/dev/software/spark-2.4.0-bin-hadoop2.7/bin/spark-submit
+
+typesafe=com.typesafe:config:1.3.3
+sparkts=/home/jouko/dev/software/spark-timeseries/target/sparkts-0.4.0-SNAPSHOT-jar-with-dependencies.jar
+
+mode=client
+dir=$HOME/dev/projects/TrainingSprints/datascience-bootcamp/WalmartForecasting
+jar=$dir/target/scala-2.11/walmartforecasting_2.11-0.1.jar
+
+
+feature_file=$dir/data/Train/FeaturesList.txt
+train_file=$dir/data/Train/TrainList.txt
+test_file=$dir/data/test_NoHeader.csv
+
+model_type=LinearRegression
+elastic_net_param=0.0
+
+reg_param=0.2
+
+for nexecutors in 1 2 3 4
+do
+  for memory in 1 2 4
+  do
+    out_file=$dir/data/predictions_AveWeek_Mesos_${reg_param}_nexec_${nexecutors}.csv
+    model_output_dir=$dir/data/LinearRegression_Mesos_${reg_param}_nexec_${nexecutors}
+    rm -r $model_output_dir
+
+    $spark_submit --class com.knoldus.training.Forecasting3 --packages $typesafe --master mesos://$ip:7077 --supervise --conf spark.master.rest.enabled=true --deploy-mode=$mode --driver-memory 3G --executor-memory 2G --num-executors $nexecutors --jars $sparkts $jar $feature_file $train_file $test_file $model_type $elastic_net_param $reg_param $model_output_dir $out_file >& log/nexec_${nexecutors}_memory_${memory}.txt
+  done
+done

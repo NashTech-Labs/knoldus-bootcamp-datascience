@@ -1,0 +1,31 @@
+@prefix scm: <http://www.scm.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+scm:Document0 scm:hasOrder scm:Order0 .
+scm:Order0 scm:hasStatus "active" .
+scm:Order0 scm:hasSalesOrder scm:SalesOrder0 .
+scm:SalesOrder0 scm:hasLineItems scm:LineItem0 .
+scm:SalesOrder0 scm:hasLineItems scm:LineItem1 .
+
+scm:LineItem0 scm:hasCustomer scm:Customer0 .
+scm:LineItem0 scm:hasProduct scm:Product0 .
+scm:LineItem0 scm:hasUnitOfMeasure "Pounds" .
+scm:LineItem0 scm:hasQuantity "1"^^xsd:integer .
+scm:LineItem0 scm:hasPrice "3.47"^^xsd:float .
+scm:LineItem0 scm:hasInstructions "blah blah blah" .
+scm:LineItem0 scm:hasDateCreated "1983-04-14"^^xsd:date .
+scm:LineItem0 scm:hasActualDeliveryDate "1983-04-15"^^xsd:date .
+scm:LineItem0 scm:hasDateOfPromise "2019-05-27"^^xsd:date .
+
+scm:LineItem1 scm:hasCustomer scm:Customer0 .
+scm:LineItem1 scm:hasProduct scm:Product1 .
+scm:LineItem1 scm:hasUnitOfMeasure "Feet" .
+scm:LineItem1 scm:hasQuantity "2"^^xsd:integer .
+scm:LineItem1 scm:hasPrice "90.54"^^xsd:float .
+scm:LineItem1 scm:hasInstructions "blah blah" .
+scm:LineItem1 scm:hasDateCreated "2019-05-25"^^xsd:date .
+scm:LineItem1 scm:hasActualDeliveryDate "2019-05-25"^^xsd:date .
+scm:LineItem1 scm:hasDateOfPromise "2019-05-28"^^xsd:date .

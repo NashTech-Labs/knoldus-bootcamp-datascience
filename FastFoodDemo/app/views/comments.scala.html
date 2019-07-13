@@ -1,0 +1,18 @@
+@import helper._
+
+@(commentForm: Form[CommentForm.CommentData])(implicit messages: Messages)
+
+@main("comments") {
+
+Leave a comment
+@helper.form(routes.CommentSubmittedController.thanks()) {
+
+@helper.select(commentForm("commentType"), options(List("Service", "Food", "Other")))
+
+@helper.textarea(commentForm("comment"))
+
+<button>Submit</button>
+}
+
+
+}

@@ -1,0 +1,32 @@
+@(orderForm: MenuForm.MenuData, foodItems: Array[Food])(implicit messages: Messages)
+
+@main("Order") {
+
+        <h1>You ordered</h1>
+
+
+        @{orderForm.cheeseBurger} Cheese Burgers $@{foodItems(0).price}<br>
+        @{orderForm.doubleDouble} Double Doubles $@{foodItems(1).price}<br>
+        @{orderForm.fries} Fries $@{foodItems(2).price}<br>
+        @{orderForm.milkShake} Milk Shakes $@{foodItems(3).price}<br>
+
+        <br>
+
+        Total $@{orderForm.cheeseBurger*foodItems(0).price + orderForm.doubleDouble*foodItems(1).price + orderForm.fries*foodItems(2).price + orderForm.milkShake*foodItems(3).price}
+
+        <br><br>
+
+        You will get your order in approximately never
+
+        <br><br>
+
+        <a href="@routes.LoginController.login">Login</a>
+
+        <br><br>
+
+        <a href="@routes.ListController.list()">See all of your orders</a>
+
+
+
+}
+

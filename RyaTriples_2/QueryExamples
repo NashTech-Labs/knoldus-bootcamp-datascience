@@ -1,0 +1,17 @@
+bin=$HOME/dev/software/sbt/bin/sbt
+
+
+$bin "runMain QueryDataServletRun data/LUBM_Queries/Query9b.txt"
+#$bin "runMain QueryDataServletRun data/LUBM_Queries/QuerySubclass.txt"
+#$bin "runMain QueryDataServletRun data/QueryPO.txt"
+#$bin "runMain QueryDataServletRun data/QueryShirts.txt"
+#$bin "runMain QueryDataServletRun data/QueryKingLear.txt"
+#$bin "runMain QueryDataServletRun data/QueryShakespeareKingLear.txt"
+#$bin "runMain QueryDataServletRun data/QueryShakespeareWrote.txt"
+#$bin "runMain QueryDataServletRun data/QueryShakespeareLivedIn.txt"
+#$bin "runMain QueryDataServletRun data/QueryShakespeareSpouse.txt"
+#$bin "runMain QueryDataServletRun data/QueryShakespeareHamnet.txt"
+#$bin "runMain QueryDataServletRun data/QueryLitSameAsSpr.txt"
+#$bin "runMain QueryDataServletRun data/QuerySprSameAsLit.txt"
+#$bin "runMain QueryDataServletRun data/QuerySibling.txt"
+

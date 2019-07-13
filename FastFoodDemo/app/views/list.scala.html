@@ -1,0 +1,38 @@
+@import helper._
+
+@(listOrders: List[Order], filterForm: Form[FilterForm.FilterData])(implicit messages: Messages)
+
+@main("List") {
+
+    Filter results
+    @helper.form(routes.ListController.list()) {
+
+        @helper.select(filterForm("foodItem"), options(List("", "Cheese Burger", "Double Double", "Fries", "Milk Shake")))
+
+        @helper.inputText(filterForm("minQuantity"))
+
+        <button>Submit</button>
+    }
+
+    <h1>You ordered</h1>
+
+    <table class="alternate">
+        <tbody>
+        <tr>
+            <td>Item</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    @for(order <- listOrders) {
+        @if(order.quantity>0) {
+                <tr>
+                    <td>@order.item</td>
+                    <td>@order.quantity</td>
+                    <td>$@order.price</td>
+                </tr>
+        }
+    }
+        </tbody>
+    </table>
+
+}

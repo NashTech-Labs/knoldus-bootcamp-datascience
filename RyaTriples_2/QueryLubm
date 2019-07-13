@@ -1,0 +1,3 @@
+bin=$HOME/dev/software/sbt/bin/sbt
+
+$bin "runMain QueryDataServletRun data/LUBM_Queries/Query$1.txt"

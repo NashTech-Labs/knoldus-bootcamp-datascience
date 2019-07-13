@@ -1,0 +1,5 @@
+<http://www.spr.com/Gulielmus> <http://www.spr.com/hasFather> <http://www.spr.com/JohannesShakspere> .
+<http://www.spr.com/Susanna> <http://www.spr.com/hasFather> <http://www.spr.com/WilliamShakspere> .
+<http://www.spr.com/Hamnet> <http://www.spr.com/hasFather> <http://www.lit.com/Shakespeare> .
+<http://www.spr.com/Judeth> <http://www.spr.com/hasFather> <http://www.spr.com/WilliamShakspere> .
+<http://www.spr.com/WilliamShakspere> <http://www.w3.org/2002/07/owl#sameAs> <http://www.lit.com/Shakespeare> .

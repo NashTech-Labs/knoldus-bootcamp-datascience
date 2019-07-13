@@ -1,0 +1,9 @@
+PREFIX lit: <http://www.lit.com/>
+PREFIX bio: <http://www.bio.com/>
+PREFIX geo: <http://www.geo.com/>
+SELECT *
+WHERE {
+	?person bio:livedIn ?place .
+	?place geo:isIn geo:England .
+	?person lit:wrote lit:KingLear .
+ }

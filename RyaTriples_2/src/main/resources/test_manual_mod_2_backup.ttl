@@ -1,0 +1,181 @@
+@prefix kn: <http://www.knoldus.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix po: <https://www.w3.org/2002/ws/sawsdl/spec/ontology/purchaseorder/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix org: <https://www.w3.org/TR/vocab-org/#org> .
+@prefix skos: <https://www.w3.org/2009/08/skos-reference/skos.html#> .
+@prefix enterprise: <http://www.aiai.ed.ac.uk/project/enterprise/enterprise/ontology-code/enterprise-v1.0/> .
+@prefix xsd: <thhp://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+kn:purchase_order a owl:class .
+
+kn:department a owl:class .
+
+kn:DEPARTMENT_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:department ;
+	rdfs:range xsd:integer .
+
+kn:DEPARTMENT_NAME a owl:DataTypeProperty ;
+	rdfs:domain kn:department ;
+	rdfs:range xsd:string .
+
+kn:cost_center a owl:class .
+
+kn:COST_CENTER a owl:DataTypeProperty ;
+	rdfs:domain kn:cost_center ;
+	rdfs:range xsd:integer .
+
+kn:COST_CENTER_NAME a owl:DataTypeProperty ;
+	rdfs:domain kn:cost_center ;
+	rdfs:range xsd:string .
+
+kn:po_type a owl:class .
+
+kn:PO_TYPE_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:po_type ;
+	rdfs:range xsd:string .
+
+kn:PO_TYPE_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:po_type ;
+	rdfs:range xsd:string .
+
+kn:po_category a owl:class .
+
+kn:PO_CATEGORY_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:po_category ;
+	rdfs:range xsd:string .
+
+kn:PO_CATEGORY_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:po_category ;
+	rdfs:range xsd:string .
+
+kn:po_status a owl:class .
+
+kn:PO_STATUS_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:po_status ;
+	rdfs:range xsd:integer .
+
+kn:PO_STATUS_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:po_status ;
+	rdfs:range xsd:string .
+
+kn:vendor rdfs:subClassOf enterprise:Vendor .
+kn:vendor_number rdfs:domain kn:vendor .
+kn:vendor_number1 rdfs:domain kn:vendor .
+kn:vendor_number2 rdfs:domain kn:vendor .
+kn:vendor_address_1 rdfs:domain kn:vendor .
+kn:vendor_address_2 rdfs:domain kn:vendor .
+vcard:locality rdfs:domain kn:vendor .
+vcard:region rdfs:domain kn:vendor .
+vcard:postal-code rdfs:domain kn:vendor .
+foaf:name rdfs:domain kn:vendor .
+vcard:hasTitle rdfs:domain kn:vendor .
+vcard:hasTelephone rdfs:domain kn:vendor .
+
+kn:VENDOR_CONTACT_EXTENSION a owl:DataTypeProperty ;
+	rdfs:domain kn:vendor ;
+	rdfs:range xsd:integer .
+
+kn:VENDOR_MINORITY_CODE a owl:DataTypeProperty ;
+	rdfs:domain kn:vendor ;
+	rdfs:range xsd:string .
+
+kn:VENDOR_MINORITY_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:vendor ;
+	rdfs:range xsd:string .
+
+kn:TOTAL_ITEMS a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:integer .
+
+kn:PO_BALANCE a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:ITME_QUANTITY_ORDERED a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:integer .
+
+kn:item a owl:class .
+
+kn:ITEM_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:item ;
+	rdfs:range xsd:string .
+
+kn:item_unit_measure a owl:class ;
+	rdfs:domain kn:purchase_order .
+
+kn:ITEM_UNIT_OF_MEASURE a owl:DataTypeProperty ;
+	rdfs:domain kn:item_unit_measure ;
+	rdfs:range xsd:string .
+
+kn:ITEM_UNIT_OF_MEASURE_DESCRIPTION a owl:DataTypeProperty ;
+	rdfs:domain kn:item_unit_measure ;
+	rdfs:range xsd:string .
+
+kn:ITEM_UNIT_COST a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:ITEM_TOTAL_COST a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:UNIQUE_ID a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:PURCHASE_ORDER_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:REQUISITION_NUMBER a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:INPUT_DATE a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:date .
+
+kn:TOTAL_AMOUNT a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:department a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:cost_center a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:INPUT_BY a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:PURCHASING_AGENT a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:string .
+
+kn:po_type a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:po_category a owl:ObjectProperty ;
+	rdfs:domain kn:purachse_order .
+
+kn:po_status a owl:ObjectProperty ;
+	rdfs:domain kn:purchase_order .
+
+kn:VOUCHED_AMOUNT a owl:DataTypeProperty ;
+	rdfs:domain kn:purchase_order ;
+	rdfs:range xsd:float .
+
+kn:vendor a owl:ObjectProperty ;
+	rdfs:domain kn:purchaser_order .
+
+#kn:purchase_order kn:PURCHASE_ORDER_NUMBER "PO171116" .
+kn:PO17116 a kn:purchase_order .
+	kn:PURCHASE_ORDER_NUMBER "PO171116" .
+	kn:REQUISITION_NUMBER "RQ041611" .
+	kn:INPUT_DATE "09/14/2017"^^xsd:date .

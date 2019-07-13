@@ -1,0 +1,3 @@
+PREFIX lit: <http://www.lit.com/>
+SELECT *
+WHERE {lit:Shakespeare lit:wrote ?p . }

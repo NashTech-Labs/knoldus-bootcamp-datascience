@@ -1,0 +1,5 @@
+PREFIX bro: <http://www.bro.com/>
+SELECT *
+WHERE {
+	?s rdf:type bro:sibling .
+ }

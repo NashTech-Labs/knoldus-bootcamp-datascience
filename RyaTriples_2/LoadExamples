@@ -1,0 +1,17 @@
+bin=$HOME/dev/software/sbt/bin/sbt
+
+$bin "runMain LoadDataServletRun scm_document.ntrips N-triples"
+$bin "runMain LoadDataServletRun scm_instances.ntrips N-triples"
+$bin "runMain LoadDataServletRun scm_po_instances.ntrips N-triples"
+$bin "runMain LoadDataServletRun scm.ntrips N-triples"
+
+
+#$bin "runMain LoadDataServletRun univ-bench.ntrips N-triples"
+#$bin "runMain LoadDataServletRun univ-bench.ntrips N-triples"
+#$bin "runMain LoadDataServletRun University0_0_mod.nt N-triples"
+#$bin "runMain LoadDataServletRun test_manual_mod_2.ntrips N-triples"
+#$bin "runMain LoadDataServletRun shop.ntrips N-triples"
+#$bin "runMain LoadDataServletRun Shakespeare.ntrips N-triples"
+#$bin "runMain LoadDataServletRun Shakespeare_2.ntrips N-triples"
+#$bin "runMain LoadDataServletRun Shakespeare_2b.ntrips N-triples"
+#$bin "runMain LoadDataServletRun brother.ntrips N-triples"

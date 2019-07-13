@@ -1,0 +1,2 @@
+<http://www.bro.com#brother> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bro.com#sibling> .
+<http://www.bro.com#jouko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bro.com#brother> .

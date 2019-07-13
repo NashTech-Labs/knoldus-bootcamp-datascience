@@ -1,0 +1,9 @@
+PREFIX lit: <http://www.lit.com/>
+PREFIX bio: <http://www.bio.com/>
+PREFIX geo: <http://www.geo.com/>
+PREFIX spr: <http://www.spr.com/>
+SELECT *
+WHERE {
+	spr:Hamnet spr:hasFather ?d .
+	?d lit:wrote lit:Hamlet .
+ }

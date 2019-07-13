@@ -1,0 +1,32 @@
+		body {
+			background-color: lightblue;
+		}
+
+		.mainTable {
+			font-family:verdana;
+			border-collapse:separate;
+			background-color:#F0F0F0;
+			border-radius:20px;
+			-moz-border-radius:20px;
+			-webkit-border-radius:20px;
+			border:1px solid;
+			width:70%;
+		}
+
+		.menueCell {
+			border-right:solid black 1px;
+			width:15%;
+		}
+
+		.mainCell {
+			width:75%;
+		}
+
+		.header {
+			font-size:36px;
+			font-family:verdana;
+			text-shadow: 5px 5px 7px;
+		}
+
+		table.alternate tr:nth-child(even) {background: #CCC;}
+        table.alternate tr:nth-child(odd) {background: #FFF;}

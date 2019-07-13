@@ -1,0 +1,16 @@
+PREFIX scm: <http://www.scm.com/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?X
+WHERE
+{
+?X rdf:type scm:Customer .
+?X scm:hasBusinessUnit ?b .
+?b scm:hasLocation ?l .
+?l scm:hasShipping ?s .
+?s scm:hasShippingValidityStatus "false" .
+}
+

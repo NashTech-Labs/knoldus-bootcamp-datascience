@@ -1,0 +1,34 @@
+
+<http://www.knoldus.com/COST_CENTER> <http://www.w3.org/2002/07/owl#DatatypeProperty>
+    <http://www.w3.org/2002/07/owl#cardinality> .
+
+<http://www.knoldus.com/DEPARTMENT_NAME> a <http://www.knoldus.com/department> .
+
+<http://www.knoldus.com/DEPARTMENT_NUMBER> <http://www.w3.org/2002/07/owl#DatatypeProperty>
+    <http://www.w3.org/2002/07/owl#cardinality> .
+
+<http://www.knoldus.com/INPUT_BY> a <http://purl.org/dc/elements/1.1/contributor> .
+
+<http://www.knoldus.com/INPUT_DATE> a <http://purl.org/dc/elements/1.1/date> .
+
+<http://www.knoldus.com/PURCHASING_AGENT> a <http://xmlns.com/foaf/0.1/Agent> .
+
+<http://www.knoldus.com/RECORD_TYPE> a <http://www.knoldus.com/record> .
+
+<http://www.knoldus.com/REQUISITION_NUMBER> a <http://www.knoldus.com/record> .
+
+<http://www.knoldus.com/TOTAL_AMOUNT> a <http://www.knoldus.com/price> .
+
+<http://www.knoldus.com/cost_center> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.knoldus.com/COST_CENTER_NAME> .
+
+<http://www.knoldus.com/po_category> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.knoldus.com/PO_CATEGORY_CODE> .
+
+<http://www.knoldus.com/po_type> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.knoldus.com/PO_TYPE_CODE>,
+    <http://www.knoldus.com/PO_TYPE_DESCRIPTION> .
+
+<http://www.knoldus.com/price> a <http://www.w3.org/2002/07/owl#Class> .
+
+<http://www.knoldus.com/record> a <http://www.w3.org/2002/07/owl#Thing> .

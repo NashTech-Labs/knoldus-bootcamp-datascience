@@ -1,0 +1,37 @@
+@prefix kn: <http://www.knoldus.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix po: <https://www.w3.org/2002/ws/sawsdl/spec/ontology/purchaseorder/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix org: <https://www.w3.org/TR/vocab-org/#org> .
+@prefix skos: <https://www.w3.org/2009/08/skos-reference/skos.html#> .
+
+kn:RECORD_TYPE owl:oneOF
+	"H" .
+	"D" .
+
+kn:PURCHASE_ORDER_NUMBER a rdf:ID
+
+kn:REQUISITION_NUMBER a rdf:ID
+
+kn:INPUT_DATE owl:DatatypeProperty
+	dc:DATE
+
+kn:TOTAL_AMOUNT owl:DatatypeProperty
+	dc:FLOAT
+
+kn:department a owl:class
+	owl:hasProperty kn:DEPARTMENT_NUMBER
+	owl:hasProperty kn:DEPARTMENT_NAME
+
+kn:department owl:sameAs
+	org:OrganizationalUnit
+
+kn:COST_CENTER owl:DatatypeProperty
+	owl:cardinality .
+
+kn:DEPARTMENT_NAME a kn:department .
+
+kn:DEPARTMENT_NUMBER owl:DatatypeProperty
+	owl:cardinality .
+

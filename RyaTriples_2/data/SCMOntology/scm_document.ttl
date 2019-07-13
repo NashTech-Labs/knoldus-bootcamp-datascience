@@ -1,0 +1,74 @@
+@prefix scm: <http://www.scm.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+scm:Document a owl:class .
+scm:Order a owl:class .
+scm:SalesOrder a owl:class .
+scm:LineItems a owl:class .
+scm:Product a owl:class .
+scm:UnitOfMeasure a owl:class .
+scm:Qunatity a owl:class .
+scm:Price a owl:class .
+scm:Instructions a owl:class .
+scm:DateCreated a owl:class .
+scm:ActualDeliveryDate a owl:class .
+scm:DateOfPromise a owl:class .
+
+scm:hasOrder a owl:ObjectTypeProperty ;
+	rdfs:range scm:Document ;
+	rdfs:domain scm:Order .
+
+scm:hasStatus a owl:DataTypeProperty ;
+	rdfs:range scm:Order ;
+	rdfs:domain xsd:string .
+
+scm:hasSalesOrder a owl:ObjectTypeProperty ;
+	rdfs:range scm:Order ;
+	rdfs:domain scm:SalesOrder .
+
+scm:hasPurchaseOrder a owl:DataTypeProperty ;
+	rdfs:range scm:Order ;
+	rdfs:domain xsd:string .
+
+scm:hasLineItem a owl:ObjectTypeProperty ;
+	rdfs:range scm:SalesOrder ;
+	rdfs:domain scm:LineItems .
+
+scm:hasCustomer a owl:ObjectTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain scm:Customer .
+
+scm:hasProduct a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:string .
+
+scm:hasUnitOfMeasure a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:string .
+
+scm:hasQuantity a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:integer .
+
+scm:hasPrice a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:float .
+
+scm:hasInstructions a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:string .
+
+scm:hasDateCreated a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:date .
+
+scm:hasActualDeliveryDate a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:date .
+
+scm:hasDateOfPromise a owl:DataTypeProperty ;
+	rdfs:range scm:LineItems ;
+	rdfs:domain xsd:data .

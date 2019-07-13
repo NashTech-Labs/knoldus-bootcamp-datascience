@@ -1,0 +1,4 @@
+@prefix shop: <http://www.shop.com#> .
+
+shop:Henleys rdfs:subClassOf shop:Shirts .
+shop:ChamoisHenley rdf:type shop:Henleys .

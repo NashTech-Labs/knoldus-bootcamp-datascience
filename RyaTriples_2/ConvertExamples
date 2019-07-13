@@ -1,0 +1,18 @@
+bin=$HOME/dev/software/sbt/bin/sbt
+
+scm_dir=data/SCMOntology
+
+$bin "runMain com.knoldus.training.ConvertFormats $scm_dir/scm.ttl TURTLE NTRIPLES $scm_dir/scm.ntrips"
+$bin "runMain com.knoldus.training.ConvertFormats $scm_dir/scm_instances.ttl TURTLE NTRIPLES $scm_dir/scm_instances.ntrips"
+$bin "runMain com.knoldus.training.ConvertFormats $scm_dir/scm_po_instances.ttl TURTLE NTRIPLES $scm_dir/scm_po_instances.ntrips"
+$bin "runMain com.knoldus.training.ConvertFormats $scm_dir/scm_document.ttl TURTLE NTRIPLES $scm_dir/scm_document.ntrips"
+
+#$bin "runMain com.knoldus.training.ConvertFormats src/main/resources/univ-bench.owl RDFXML NTRIPS src/main/resources/univ-bench.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats src/main/resources/univ-bench_mod.owl RDFXML NTRIPS src/main/resources/univ-bench_mod.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats test_manual_mod_2.ttl src/main/resources/test_manual_mod_2.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats shop.ttl src/main/resources/shop.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats Shakespeare.ttl src/main/resources/Shakespeare.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats Shakespeare_2.ttl src/main/resources/Shakespeare_2.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats Shakespeare_2b.ttl src/main/resources/Shakespeare_2b.ntrips"
+#$bin "runMain com.knoldus.training.ConvertFormats brother.ttl src/main/resources/brother.ntrips"
+

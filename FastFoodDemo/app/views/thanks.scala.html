@@ -1,0 +1,16 @@
+@(commentData: CommentForm.CommentData)(implicit messages: Messages)
+
+@main("thanks") {
+
+<h1>Thanks for the comment</h1>
+
+You left a comment about @{commentData.commentType}<br><br>
+
+Your comment was: <br><br>
+
+@commentData.comment
+
+
+
+}
+

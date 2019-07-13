@@ -1,0 +1,8 @@
+@prefix spr: <http://www.spr.com/> .
+@prefix lit: <http://www.lit.com/> .
+
+spr:Gulielmus spr:hasFather spr:JohannesShakspere .
+spr:Susanna spr:hasFather spr:WilliamShakspere .
+spr:Hamnet spr:hasFather spr:WilliamShakspere .
+spr:Judeth spr:hasFather spr:WilliamShakspere .
+spr:WilliamShakspere owl:sameAs lit:Shakespeare .

@@ -1,0 +1,11 @@
+PREFIX lit: <http://www.lit.com/>
+PREFIX bio: <http://www.bio.com/>
+PREFIX geo: <http://www.geo.com/>
+SELECT *
+WHERE {
+	{
+		{?spouse1 bio:married ?spouse2}
+		UNION {?spouse2 bio:married ?spouse1}
+	}
+	{?spouse1 lit:wrote lit:KingLear}
+ }

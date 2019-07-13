@@ -1,0 +1,16 @@
+software=$HOME/dev/software
+hadoop_dir=$software/hadoop-3.1.2
+accumulo_dir=$software/accumulo-1.9.3
+#accumulo_dir=$software/accumulo-2.0.0-alpha-2
+accumulo_bin=$accumulo_dir/bin/accumulo
+tomcat_bin=$software/apache-tomcat-8.5.40/bin/startup.sh
+
+$software/zookeeper-3.4.14/bin/zkServer.sh start
+cd $hadoop_dir
+./RunHdfs
+$tomcat_bin
+$accumulo_bin init
+$accumulo_bin master &
+$accumulo_bin tserver &
+$accumulo_bin monitor &
+$accumulo_bin gc &

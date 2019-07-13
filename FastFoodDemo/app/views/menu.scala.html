@@ -1,0 +1,19 @@
+@import helper._
+
+@(postUrl: Call, form: Form[MenuForm.MenuData], foodItems: Array[Food])(implicit messages: Messages)
+
+@main("menu") {
+
+<h1>Menu</h1>
+
+    @helper.form(postUrl) {
+
+        @for(i <- 0 until 4) {
+            @helper.inputText(form("Food_" + i), '_label -> (foodItems(i).food_item + " $" + foodItems(i).price), '_showConstraints -> false)
+        }
+
+        <button>Order</button>
+    }
+
+}
+

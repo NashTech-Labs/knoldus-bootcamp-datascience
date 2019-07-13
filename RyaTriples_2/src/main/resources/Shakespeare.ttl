@@ -1,0 +1,23 @@
+@prefix lit: <http://www.lit.com/> .
+@prefix bio: <http://www.bio.com/> .
+@prefix geo: <http://www.geo.com/> .
+
+lit:Shakespeare lit:wrote lit:AsYouLikeIt;
+	lit:wrote lit:TwelfthNight;
+	lit:wrote lit:KingLear;
+	lit:wrote lit:LovesLaboursLost;
+	lit:wrote lit:Hamlet;
+	lit:wrote lit:TheTempest;
+	lit:wrote lit:WintersTale;
+	lit:wrote lit:HenryV;
+	lit:wrote lit:MeasureForMeasure;
+	lit:wrote lit:Othello;
+	bio:livedIn geo:Stratford.
+bio:AnneHathaway bio:married lit:Shakespeare.
+geo:Stratford geo:isIn geo:England.
+geo:Scotland geo:partOf geo:UK.
+geo:England geo:partOf geo:UK.
+geo:Wales geo:partOf geo:UK.
+geo:NorthernIreland geo:partOf geo:UK.
+geo:ChannelIslands geo:partOf geo:UK.
+geo:IsleOfMan geo:partOf geo:UK.
