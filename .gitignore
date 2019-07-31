@@ -3,6 +3,8 @@
 *.jar
 *.out
 *.log
+data/
+spark-warehouse/
 target/
 project/
 .idea/
@@ -34,3 +36,4 @@ dcos-launch-*
 env/
 venv/
 .DS_Store
+run/

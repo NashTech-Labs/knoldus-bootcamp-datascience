@@ -1,4 +1,4 @@
-package example
+package sparktests
 
 import com.holdenkarau.spark.testing.{SharedSparkContext, StructuredStreamingBase}
 import org.apache.spark.sql._

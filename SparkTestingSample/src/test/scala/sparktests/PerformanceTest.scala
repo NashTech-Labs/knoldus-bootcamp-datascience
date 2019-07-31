@@ -1,4 +1,4 @@
-package example
+package sparktests
 
 import java.nio.file.Files
 

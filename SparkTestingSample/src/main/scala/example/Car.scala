@@ -1,7 +1,7 @@
 package example
 
-import example.Direction
-import example.Direction.Direction
+import common.Direction.Direction
+import common.{Direction, Vehicle}
 
 
 class Position(x:Int, y:Int, direction: Direction.Direction) {
@@ -15,9 +15,10 @@ class Position(x:Int, y:Int, direction: Direction.Direction) {
 
 }
 
-class Car extends Vehicle {
+class Car(val make :String, val model :String, year :Int) extends Vehicle {
   private var speed :Int = 0 ;
   private var position = new Position(0,0,Direction.NORTH)
+
 
   override def setSpeed(speed: Int): Unit = {
     this.speed = speed
@@ -35,10 +36,6 @@ class Car extends Vehicle {
   }
 }
 
-object Main extends  App {
-
-  val car = new Car
-  car.move(1,1,Direction.SOUTH)
-  car.makeSound("rrrrrrrrrr")
-  println(car.getPosition().print)
+object Car {
+  def Car( make :String,  model :String, year :Int) = new Car(make,model,year)
 }

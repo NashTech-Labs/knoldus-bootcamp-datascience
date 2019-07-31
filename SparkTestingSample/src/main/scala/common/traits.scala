@@ -1,14 +1,14 @@
-package example
+package common
 
-import example.Direction.Direction
-
+import common.Direction.Direction
+import example.Position
 
 object Direction extends Enumeration {
   type Direction = Value
   val NORTH, SOUTH, EAST, WEST = Value
 }
 
-trait Vehicle {
+trait Vehicle  {
 
   def setSpeed(speed :Int)
 
@@ -17,6 +17,5 @@ trait Vehicle {
   def move(x :Int, y:Int , direction :Direction) :Position
 
   def getPosition() :Position
-
 
 }

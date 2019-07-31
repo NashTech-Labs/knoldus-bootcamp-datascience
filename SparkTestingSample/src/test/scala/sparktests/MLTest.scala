@@ -1,4 +1,4 @@
-package example
+package sparktests
 
 import com.holdenkarau.spark.testing.{DataframeGenerator, SharedSparkContext}
 import org.apache.spark.ml.linalg.SQLDataTypes.{MatrixType, VectorType}
