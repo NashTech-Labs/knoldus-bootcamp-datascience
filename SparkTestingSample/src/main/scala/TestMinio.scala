@@ -14,7 +14,7 @@ object TestMinio  {
       .appName("Minio Testing")
       .config("fs.s3a.access.key", "ga_read_user")
       .config("fs.s3a.secret.key", miniopassword)
-      .config("fs.s3a.endpoint", "10.16.4.176:10213")
+      .config("fs.s3a.endpoint", "10.16.5.152:10213")
       .config("fs.s3a.path.style.access", "true")
       .config("fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
       .config("fs.s3a.connection.ssl.enabled", "false")
